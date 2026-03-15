@@ -1,95 +1,142 @@
-const cursor = document.getElementById("cursor")
+<!DOCTYPE html>
+<html lang="en">
 
-document.addEventListener("mousemove", e=>{
-cursor.style.transform =
-`translate(${e.clientX}px,${e.clientY}px)`
-})
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>THEPRANIKEDITS</title>
 
-const canvas = document.getElementById("particles")
-const ctx = canvas.getContext("2d")
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
 
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+</head>
 
-let particles=[]
+<body>
 
-for(let i=0;i<160;i++){
+<canvas id="particles"></canvas>
+<div id="cursor"></div>
 
-particles.push({
+<header>
 
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-size:Math.random()*2,
-speedX:(Math.random()-0.5)*0.7,
-speedY:(Math.random()-0.5)*0.7
+<div class="logo">THEPRANIKEDITS</div>
 
-})
+<nav>
+<a href="#reels">Reels</a>
+<a href="#thumbs">Thumbnails</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
 
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height)
-
-particles.forEach(p=>{
-
-p.x+=p.speedX
-p.y+=p.speedY
-
-ctx.fillStyle="rgba(0,150,255,0.7)"
-
-ctx.beginPath()
-ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
-ctx.fill()
-
-})
-
-requestAnimationFrame(animate)
-
-}
-
-animate()
+</header>
 
 
 
-const reels=document.querySelectorAll(".reel")
+<section class="hero">
 
-const observer=new IntersectionObserver(entries=>{
+<video autoplay muted loop playsinline class="heroVideo">
+<source src="hero.mp4" type="video/mp4">
+</video>
 
-entries.forEach(entry=>{
+<div class="heroText">
 
-if(entry.isIntersecting){
-entry.target.play()
-}else{
-entry.target.pause()
-}
+<h1>CINEMATIC EDITING STUDIO</h1>
 
-})
+<p>Reels • Shorts • YouTube Editing • Website Creation</p>
 
-},{threshold:0.6})
+</div>
 
-reels.forEach(r=>observer.observe(r))
+</section>
 
 
 
-const fullscreen=document.getElementById("fullscreen")
+<section id="reels">
 
-function openFull(el){
+<h2>Reel Showcase</h2>
 
-fullscreen.style.display="flex"
+<div class="reelGrid">
 
-const clone=el.cloneNode(true)
+<video class="reel" muted loop playsinline>
+<source src="reel1.mp4" type="video/mp4">
+</video>
 
-clone.controls=true
-clone.autoplay=true
+<video class="reel" muted loop playsinline>
+<source src="reel2.mp4" type="video/mp4">
+</video>
 
-fullscreen.innerHTML=""
-fullscreen.appendChild(clone)
+<video class="reel" muted loop playsinline>
+<source src="reel3.mp4" type="video/mp4">
+</video>
 
-}
+</div>
 
-fullscreen.onclick=()=>{
-fullscreen.style.display="none"
-}
+</section>
+
+
+
+<section id="thumbs">
+
+<h2>Thumbnail Designs</h2>
+
+<div class="thumbGrid">
+
+<img src="thumb1.jpg">
+<img src="thumb2.jpg">
+<img src="thumb3.jpg">
+
+</div>
+
+</section>
+
+
+
+<section id="services">
+
+<h2>Website Creation Services</h2>
+
+<div class="serviceBox">
+
+<p>✔ Professional Business Websites</p>
+<p>✔ Portfolio Websites For Creators</p>
+<p>✔ E-Commerce Shopping Websites</p>
+<p>✔ Custom Client Websites</p>
+<p>✔ Fully Responsive (Mobile / Desktop)</p>
+<p>✔ Fast Loading + Modern UI</p>
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="icons">
+
+<a href="https://instagram.com/thepranikedits" target="_blank">
+<img src="instagram.png">
+</a>
+
+<a href="https://instagram.com/thepranikvibes" target="_blank">
+<img src="instagram.png">
+</a>
+
+<a href="mailto:thepranik.edits@gmail.com">
+<img src="gmail.png">
+</a>
+
+</div>
+
+</section>
+
+
+
+<div id="fullscreen"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
