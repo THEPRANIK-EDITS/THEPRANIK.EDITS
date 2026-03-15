@@ -1,94 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>THEPRANIK.EDITS</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>THEPRANIKEDITS</title>
+
+<link rel="icon" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
+<canvas id="particles"></canvas>
+<div id="cursor"></div>
+
 <header>
-<h1 class="logo">THEPRANIK.EDITS</h1>
+
+<div class="logo">THEPRANIKEDITS</div>
+
 <nav>
 <a href="#reels">Reels</a>
 <a href="#thumbs">Thumbnails</a>
-<a href="#youtube">YouTube Editing</a>
-<a href="#websites">Websites</a>
+<a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
+
 <section class="hero">
-<h2>Cinematic Video Editor</h2>
-<p>Reels • Shorts • Thumbnails • YouTube Videos • Websites</p>
+
+<video autoplay muted loop playsinline class="heroVideo">
+<source src="hero.mp4">
+</video>
+
+<div class="heroText">
+
+<h1>CINEMATIC EDITING STUDIO</h1>
+
+<p>Reels • Shorts • YouTube Editing • Websites</p>
+
+</div>
+
 </section>
+
+
 
 <section id="reels">
-<h2>Reel Editing Samples</h2>
-<div class="grid">
-<video onclick="openFull(this)" muted loop>
-<source src="assets/reel1.mp4">
+
+<h2>Reel Showcase</h2>
+
+<div class="reelStack">
+
+<video class="reel" muted loop onclick="openFull(this)">
+<source src="reel1.mp4">
 </video>
-<video onclick="openFull(this)" muted loop>
-<source src="assets/reel2.mp4">
+
+<video class="reel" muted loop onclick="openFull(this)">
+<source src="reel2.mp4">
 </video>
-<video onclick="openFull(this)" muted loop>
-<source src="assets/reel3.mp4">
+
+<video class="reel" muted loop onclick="openFull(this)">
+<source src="reel3.mp4">
 </video>
+
 </div>
+
 </section>
+
+
 
 <section id="thumbs">
-<h2>Thumbnail Samples</h2>
-<div class="grid">
-<img src="assets/thumb1.jpg" onclick="openFull(this)">
-<img src="assets/thumb2.jpg" onclick="openFull(this)">
-<img src="assets/thumb3.jpg" onclick="openFull(this)">
+
+<h2>Thumbnail Designs</h2>
+
+<div class="thumbGrid">
+
+<img src="thumb1.jpg" onclick="openFull(this)">
+<img src="thumb2.jpg" onclick="openFull(this)">
+<img src="thumb3.jpg" onclick="openFull(this)">
+
 </div>
+
 </section>
 
-<section id="youtube">
-<h2>YouTube Video Editing Services</h2>
-<p class="bigtext">We create professional YouTube videos including:</p>
-<ul>
-<li>Vlogs</li>
-<li>Gaming Videos</li>
-<li>Educational Content</li>
-<li>Business Videos</li>
-<li>Motivational Videos</li>
-</ul>
-</section>
 
-<section id="websites">
+
+<section id="services">
+
 <h2>Website Creation Services</h2>
-<p class="bigtext">We also design websites for clients based on their needs.</p>
-<ul>
-<li>Business Profile Websites</li>
-<li>Portfolio Websites</li>
-<li>E-commerce Shopping Websites</li>
-<li>Personal Brand Websites</li>
-<li>Custom Websites as per requirement</li>
-</ul>
-<p class="bigtext">Example: The website you are currently viewing is also created by us.</p>
+
+<div class="serviceBox">
+
+<p>✔ Business Websites</p>
+<p>✔ Portfolio Websites</p>
+<p>✔ E-Commerce Websites</p>
+<p>✔ Custom Client Websites</p>
+<p>✔ Fast Responsive Design</p>
+
+</div>
+
 </section>
+
+
 
 <section id="contact">
-<h2>Contact Me</h2>
+
+<h2>Contact</h2>
+
 <div class="icons">
-<a href="https://www.instagram.com/thepranik.edits">
-<img src="assets/instagram.png">
+
+<a href="https://instagram.com/thepranikedits">
+<img src="instagram.png">
 </a>
-<a href="https://www.instagram.com/thepranikvibes">
-<img src="assets/instagram.png">
+
+<a href="https://instagram.com/thepranikedits">
+<img src="instagram.png">
 </a>
-<a href="mailto:thepranik.edits@gmail.com">
-<img src="assets/gmail.png">
+
+<a href="mailto:youremail@gmail.com">
+<img src="gmail.png">
 </a>
+
 </div>
+
 </section>
 
-<div id="fullscreen" onclick="closeFull()"></div>
+
+<div id="fullscreen"></div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
